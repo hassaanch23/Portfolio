@@ -1,0 +1,62 @@
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--secondary-color);
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  line-height: 0;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats {
+  background: linear-gradient(rgba(5, 13, 24, 0.8), rgba(5, 13, 24, 0.8)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #fff;
+}
+
+.stats .stats-item {
+  padding: 30px;
+  width: 100%;
+}
+
+.stats .stats-item span {
+  font-size: 48px;
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.stats .stats-item p {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.stats .stats-item i {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
