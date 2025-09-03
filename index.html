@@ -144,11 +144,13 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row skills-content">
-
-          <div class="col-lg-4">
+        <div class="skills-container">
+          <div class="skills-wrapper">
             <div class="skills-category">
-              <h4><i class="bi bi-code-slash"></i> Front End</h4>
+              <div class="skills-header">
+                <i class="bi bi-code-slash"></i>
+                <h4>Front End</h4>
+              </div>
               <div class="skills-list">
                 <div class="skill-item"><i class="bi bi-check-circle"></i> HTML</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> CSS</div>
@@ -159,11 +161,12 @@
                 <div class="skill-item"><i class="bi bi-check-circle"></i> JavaScript</div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4">
             <div class="skills-category">
-              <h4><i class="bi bi-server"></i> Back End</h4>
+              <div class="skills-header">
+                <i class="bi bi-server"></i>
+                <h4>Back End</h4>
+              </div>
               <div class="skills-list">
                 <div class="skill-item"><i class="bi bi-check-circle"></i> MongoDB</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> MySQL</div>
@@ -173,23 +176,59 @@
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Java</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Node.js</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Express.js</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> VS Code</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> IntelliJ</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Android Studio</div>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-4">
             <div class="skills-category">
-              <h4><i class="bi bi-gear-wide-connected"></i> Other</h4>
+              <div class="skills-header">
+                <i class="bi bi-cpu"></i>
+                <h4>Artificial Intelligence</h4>
+              </div>
               <div class="skills-list">
-                <div class="skill-item"><i class="bi bi-check-circle"></i> Digital Marketing</div>
-                <div class="skill-item"><i class="bi bi-check-circle"></i> Problem Solving</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Natural Language Processing</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Machine Learning</div>
                 <div class="skill-item"><i class="bi bi-check-circle"></i> Chatbot Development</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Deep Learning</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Computer Vision</div>
+              </div>
+            </div>
+
+            <div class="skills-category">
+              <div class="skills-header">
+                <i class="bi bi-graph-up"></i>
+                <h4>Data Science</h4>
+              </div>
+              <div class="skills-list">
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Data Analysis</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Statistical Modeling</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Data Visualization</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Predictive Analytics</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Big Data Processing</div>
+              </div>
+            </div>
+            <div class="skills-category">
+              <div class="skills-header">
+                <i class="bi bi-gear-wide-connected"></i>
+                <h4>Other</h4>
+              </div>
+              <div class="skills-list">
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Digital Marketing</div>
+                <div class="skill-item"><i class="bi bi-check-circle"></i> Problem Solving</div>
               </div>
             </div>
           </div>
-
+          
+          <div class="skills-nav">
+            <button class="skills-nav-btn prev" onclick="scrollSkills('left')">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="skills-nav-btn next" onclick="scrollSkills('right')">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -549,7 +588,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>03284488438</p>
+                  <p><a href="https://wa.me/923284488438" target="_blank" class="contact-link">03284488438</a></p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -557,7 +596,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>imhassaan04@gmail.com</p>
+                  <p><a href="mailto:imhassaan04@gmail.com" class="contact-link">imhassaan04@gmail.com</a></p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -660,7 +699,20 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Skills Scrolling Script -->
+  <script>
+    function scrollSkills(direction) {
+      const wrapper = document.querySelector('.skills-wrapper');
+      const scrollAmount = 350; // Adjust this value to control scroll distance
+      
+      if (direction === 'left') {
+        wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+  </script>
+
 </body>
 
-</html>
 </html>
